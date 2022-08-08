@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rowdies&display=swap');
+
+body{
+  background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  grid-area: header;
+  color: white;
+  background-color: #001524;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+aside{
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1rem;
+}
+
+section{
+  grid-area: products;
+  padding: 4rem;
+  z-index: 0;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #001524;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "sidebar products"
+  "footer footer";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 4rem auto 8rem;
+}
+
+/* HEADER */
+.brand{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brand h1{
+  font-family: 'Rowdies', cursive;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand img{
+  height: 2rem;
+  margin-right: 5px;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.links a{
+  padding: 0 .6rem;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 4rem;
+  transition: all .3s ease;
+  box-sizing: border-box;
+}
+
+.links a:hover{
+  background-color: #00849f;
+}
+
+.links i{
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+/* BARRA LATERAL */
+aside h3 {
+  margin-left: .8rem;
+  margin-bottom: .5rem;
+  font-size: 20px;
+  color: #001524;
+}
+
+aside > article{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: .8rem;
+  border-bottom: solid 1px gainsboro;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+/* GRILLA DE PRODUCTOS */
+section > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+section > h2 {
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+  color: #001524;
+}
+
+/* CARDS DE PRODUCTOS */
+.producto{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+  transition: box-shadow .3s ease;
+  position: relative;
+}
+
+.badge{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #4B0082;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: .2rem .5rem;
+  border-radius: 2px;
+}
+
+.producto img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-text{
+  padding: 1rem;
+  text-align: center;
+  flex-grow: 1;
+  box-shadow: 0px -6px 6px -8px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card-text :nth-child(1){
+  color: gray;
+  font-size: 12px;
+}
+
+.card-text :nth-child(2) {
+  color: #001524;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.card-text :nth-child(3) {
+  color: #005F73;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.producto button{
+  border: none;
+  color: white;
+  background: #28ABB9;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.producto button:hover{
+  background: #005F73;
+}
+
+.producto button:focus {
+  background: #a4a4a4;
+}
+
+/* FOOTER */
+footer > p{
+  font-weight: 300;
+}
+
+.media{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.media a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid 2px white;
+  border-radius: 50%;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+  transition: all .3s ease;
+}
+
+.media a:hover{
+  background-color: white;
+  color: #001524;
+}
