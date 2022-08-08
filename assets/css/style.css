@@ -2,6 +2,7 @@
 
 body{
   background-color: #fafafa;
+  color: #262626;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -111,10 +112,23 @@ aside > article{
   padding: .8rem;
   border-bottom: solid 1px gainsboro;
   cursor: pointer;
-  transition: background-color .5s ease;
+}
+
+aside > article i{
+  transition: color .3s ease;
+}
+
+aside > article:hover i{
+  color: #28ABB9;
 }
 
 /* GRILLA DE PRODUCTOS */
+section > h2 {
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+  color: #001524;
+}
+
 section > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -122,11 +136,6 @@ section > div {
   box-sizing: border-box;
 }
 
-section > h2 {
-  margin-bottom: 1.5rem;
-  font-size: 20px;
-  color: #001524;
-}
 
 /* CARDS DE PRODUCTOS */
 .producto{
