@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rowdies&display=swap');
 
-body{
+body {
   background-color: #fafafa;
   color: #262626;
   font-family: 'Roboto', sans-serif;
 }
 
-header{
+header {
   grid-area: header;
   color: white;
   background-color: #001524;
@@ -17,22 +17,23 @@ header{
   position: sticky;
   top: 0;
   z-index: 2;
+  overflow: hidden;
 }
 
-aside{
+aside {
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
   padding: 4rem 1rem;
 }
 
-section{
+section {
   grid-area: products;
   padding: 4rem;
   z-index: 0;
 }
 
-footer{
+footer {
   grid-area: footer;
   background-color: #001524;
   color: white;
@@ -42,59 +43,56 @@ footer{
   justify-content: center;
 }
 
-main{
+main {
   min-height: 100vh;
   display: grid;
   grid-template-areas:
-  "header header"
-  "sidebar products"
-  "footer footer";
+    "header header"
+    "sidebar products"
+    "footer footer";
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 4rem auto 8rem;
 }
 
 /* HEADER */
-.brand{
+.brand {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.brand h1{
+.brand h1 {
   font-family: 'Rowdies', cursive;
   font-size: 24px;
   font-weight: 800;
 }
 
-.brand img{
-  height: 2rem;
+.brand img {
+  width: 2rem;
   margin-right: 5px;
 }
 
-.links{
+.links,
+.links ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
-.links a{
-  padding: 0 .6rem;
-  text-decoration: none;
+.links li a {
   color: white;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 4rem;
-  transition: all .3s ease;
+  padding: 24px 15px;
   box-sizing: border-box;
+  text-decoration: none;
+  transition: background-color .3s ease;
 }
 
-.links a:hover{
-  background-color: #00849f;
+.links li a:hover {
+  background-color: #005F73;
 }
 
-.links i{
-  margin-left: 3rem;
-  cursor: pointer;
+.links a i {
+  color: white;
+  margin-left: 2rem;
 }
 
 /* BARRA LATERAL */
@@ -105,7 +103,7 @@ aside h3 {
   color: #001524;
 }
 
-aside > article{
+aside>article {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -114,22 +112,22 @@ aside > article{
   cursor: pointer;
 }
 
-aside > article i{
+aside>article i {
   transition: color .3s ease;
 }
 
-aside > article:hover i{
+aside>article:hover i {
   color: #28ABB9;
 }
 
 /* GRILLA DE PRODUCTOS */
-section > h2 {
+section>h2 {
   margin-bottom: 1.5rem;
   font-size: 20px;
   color: #001524;
 }
 
-section > div {
+section>div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 3rem;
@@ -138,7 +136,7 @@ section > div {
 
 
 /* CARDS DE PRODUCTOS */
-.producto{
+.producto {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -147,7 +145,7 @@ section > div {
   position: relative;
 }
 
-.badge{
+.badge {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -159,12 +157,12 @@ section > div {
   border-radius: 2px;
 }
 
-.producto img{
+.producto img {
   width: 100%;
   object-fit: contain;
 }
 
-.card-text{
+.card-text {
   padding: 1rem;
   text-align: center;
   flex-grow: 1;
@@ -172,7 +170,7 @@ section > div {
   z-index: 1;
 }
 
-.card-text :nth-child(1){
+.card-text :nth-child(1) {
   color: gray;
   font-size: 12px;
 }
@@ -190,7 +188,7 @@ section > div {
   margin: 10px 0;
 }
 
-.producto button{
+.producto button {
   border: none;
   color: white;
   background: #28ABB9;
@@ -200,7 +198,7 @@ section > div {
   transition: background-color .5s ease;
 }
 
-.producto button:hover{
+.producto button:hover {
   background: #005F73;
 }
 
@@ -209,17 +207,17 @@ section > div {
 }
 
 /* FOOTER */
-footer > p{
+footer>p {
   font-weight: 300;
 }
 
-.media{
+.media {
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
 }
 
-.media a{
+.media a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,7 +232,7 @@ footer > p{
   transition: all .3s ease;
 }
 
-.media a:hover{
+.media a:hover {
   background-color: white;
   color: #001524;
 }
