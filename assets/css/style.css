@@ -6,8 +6,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-header {
-  grid-area: header;
+nav {
+  grid-area: nav;
   color: white;
   background-color: #001524;
   display: flex;
@@ -47,7 +47,7 @@ main {
   min-height: 100vh;
   display: grid;
   grid-template-areas:
-    "header header"
+    "nav nav"
     "sidebar products"
     "footer footer";
   grid-template-columns: 1fr 5fr;
